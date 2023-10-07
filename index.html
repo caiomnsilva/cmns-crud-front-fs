@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Front Crud</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="white">
+      <div class="bg-white p-4">
+        <h5 class="text-body-emphasis h4">Faculdade Nova Roma</h5>
+        <span class="text-body-secondary">Caio Mário do Nascimento Silva</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-white bg-white">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    
+      <div id="loading" class="text-center" role="status">
+  <div class="spinner-border" role="status">
+  </div>
+</div>
+    
+    <div id="form">
+      <h1 class="text-center">CADASTRA ITEM</h1>
+      <form class="row g-3 needs-validation" novalidate>
+        <input id="index" type="hidden">
+        <div class="col-md-12">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" required>
+          <div class="valid-feedback">
+            Nome preenchido
+          </div>
+          <div class="invalid-feedback">
+            Nome é obrigatório
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="weigth" class="form-label">Peso</label>
+          <input type="text" class="form-control" id="weigth" required>
+          <div class="valid-feedback">
+            Peso preenchido
+          </div>
+          <div class="invalid-feedback">
+            Peso é obrigatório
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="age" class="form-label">Idade</label>
+          <input type="text" class="form-control" id="age" required>
+          <div class="valid-feedback">
+            Idade preenchida
+          </div>
+          <div class="invalid-feedback">
+            Idade é obrigatória
+          </div>
+        </div>
+        <div class="col-12">
+          <button onclick="salvar()" id="salvar-btn" class="btn btn-primary">Salvar</button>
+          <button onclick="hideForm()" id="cancelar-btn" class="btn btn-primary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="table">
+      <br>
+      <br>
+      <h1 class="text-center">LISTA CRUD</h1>
+      <div class="text-center">
+        <button onclick="showForm()" id="cadastrar-btn" class="btn btn-primary">Cadastrar</button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela">
+
+        </tbody>
+      </table>
+      <br>
+      <br>
+    </div>
+  </div>
+</body>
+<!-- IMPORTANDO JQUERY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- IMPORTANDO JS DO BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- IMPORTANDO SCRIPT LOCAL (NOSSA LÓGICA) -->
+<script src="script.js"></script>
+<script src="./logic/pegar-dados.js"></script>
+<script src="./logic/salvar-dados.js"></script>
+<script src="./logic/deletar-dados.js"></script>
+<script src="./logic/editar-dados.js"></script>
+<script src="./logic/montar-dados.js"></script>
+<!-- SCRIPT INICIAL -->
+
+</html>
