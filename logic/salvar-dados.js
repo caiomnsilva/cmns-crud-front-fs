@@ -22,8 +22,8 @@ function salvar() {
     $("form").trigger("reset")
     $("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
     setTimeout(() => {
-      $("form").removeClass("was-validated")
-hideForm()
+      $("form").removeClass("was-validated") // limpa a confimação do campo
+      hideForm() // esconde formulario ao finalizar
     }, 1)
 
   }

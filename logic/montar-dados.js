@@ -1,9 +1,9 @@
-function monteTabela(){
-	pessoas = pegaDados()
-	let lista = ""
-	for(let [i, p] of pessoas.entries()){
-		lista += 
-			`
+function monteTabela() {
+  pessoas = pegaDados()
+  let lista = ""
+  for (let [i, p] of pessoas.entries()) { //montando tabela
+    lista +=
+      `
 	 <tr>
 					<th scope="row">${i}</th>
 					<td>${p.nome}</td>
@@ -15,9 +15,9 @@ function monteTabela(){
 					</td>
 				</tr>
 	 `
-	}
-	document.getElementById("tabela").innerHTML = lista // JS PURO
-	$("#tabela").html(lista) //JQUERY
+  }
+  document.getElementById("tabela").innerHTML = lista // JS PURO
+  $("#tabela").html(lista) //JQUERY
 }
 
 monteTabela()

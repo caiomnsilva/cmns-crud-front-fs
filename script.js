@@ -16,24 +16,23 @@ $(document).ready(function() {
     }, false)
   })
 });
-
+// função para mostrar formulario e apresentar tela de loading
 function showForm() {
   $("#table").hide()
   $("#loading").show()
-  
+
   setTimeout(() => {
     $("#form").show();
     $("#loading").hide();
   }, 1000);
 }
-
+// função para esconder formulario e apresentar tela de loading
 function hideForm() {
   $("#form").hide()
   $("#loading").show()
 
-    setTimeout(() => {
+  setTimeout(() => {
     $("#table").show();
     $("#loading").hide();
   }, 1000);
-  
 }
